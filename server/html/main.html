@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>не знаю как назвать</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+    <h1>что то</h1>
+
+    <section>
+        <h2>Создать новый товар</h2>
+        <form id="createProductForm">
+            <label for="plu">PLU:</label>
+            <input type="text" id="plu" name="plu" required>
+            <label for="name">Название:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit" onclick="createProductForm()">Создать товар</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>обновить товар</h2>
+        <form id="updateProductForm">
+            <label for="product_id">ID Товара:</label>
+            <input type="number" id="product_id" name="product_id" required>
+            <label for="plu">PLU:</label>
+            <input type="text" id="plu" name="plu" required>
+            <label for="name">Название:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit" onclick="updateProductForm()">обновить товар</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>удалить товар</h2>
+        <form id="deleteProductForm">
+            <label for="product_id">ID Товара:</label>
+            <input type="number" id="product_id" name="product_id" required>
+            <button type="submit" onclick="deleteProductForm()">удалить товар</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Поиск товаров (одного)</h2>
+        <form id="searchProductsForm">
+            <label for="search_plu">PLU:</label>
+            <input type="text" id="search_plu" name="search_plu">
+            <label for="search_name">Название:</label>
+            <input type="text" id="search_name" name="search_name">
+            <button type="submit" onclick="searchProductsForm()">Поиск</button>
+        </form>
+        <div id="productsResults"></div>
+    </section>
+
+    <section>
+        <h2>Поиск товаров (всех)</h2>
+        <form id="searchProductsFormAll">
+            <button type="submit" onclick="searchProductsFormAll()">Поиск</button>
+        </form>
+        <div id="productsResultsAll"></div>
+    </section>
+
+    <section>
+        <h2>Создать новый остаток</h2>
+        <form id="createStockForm">
+            <label for="product_id">ID Товара:</label>
+            <input type="number" id="product_id" name="product_id" required>
+            <label for="shop_id">ID Магазина:</label>
+            <input type="number" id="shop_id" name="shop_id" required>
+            <label for="on_shelf">На полке:</label>
+            <input type="number" id="on_shelf" name="on_shelf" required>
+            <label for="in_order">В заказе:</label>
+            <input type="number" id="in_order" name="in_order" required>
+            <button type="submit" onclick="createStockForm()">Создать остаток</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>обновить остаток</h2>
+        <form id="updateStockForm">
+            <label for="product_id">ID Товара:</label>
+            <input type="number" id="product_id" name="product_id" required>
+            <label for="shop_id">ID Магазина:</label>
+            <input type="number" id="shop_id" name="shop_id" required>
+            <label for="on_shelf">На полке:</label>
+            <input type="number" id="on_shelf" name="on_shelf" required>
+            <label for="in_order">В заказе:</label>
+            <input type="number" id="in_order" name="in_order" required>
+            <button type="submit" onclick="updateStockForm()">обновить остаток</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>удалить остаток</h2>
+        <form id="deleteStockForm">
+            <label for="product_id">ID Товара:</label>
+            <input type="number" id="product_id" name="product_id" required>
+            <button type="submit" onclick="deleteStockForm()">удалить остаток</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Поиск остатков</h2>
+        <form id="searchStocksForm">
+            <label for="search_plu_stock">PLU:</label>
+            <input type="text" id="search_plu_stock" name="search_plu_stock">
+            <label for="search_shop_id">ID Магазина:</label>
+            <input type="number" id="search_shop_id" name="search_shop_id">
+            <label for="on_shelf_from">Остаток на полке (от):</label>
+            <input type="number" id="on_shelf_from" name="on_shelf_from">
+            <label for="on_shelf_to">Остаток на полке (до):</label>
+            <input type="number" id="on_shelf_to" name="on_shelf_to">
+            <label for="in_order_from">В заказе (от):</label>
+            <input type="number" id="in_order_from" name="in_order_from">
+            <label for="in_order_to">В заказе (до):</label>
+            <input type="number" id="in_order_to" name="in_order_to">
+            <button type="submit" onclick="searchStocksForm()">Поиск</button>
+        </form>
+        <div id="stocksResults"></div>
+    </section>
+</body>
+</html>
